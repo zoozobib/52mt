@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="摇钱木又寸（www.52moneytree.com）是AdbestBuy.com旗下'互联网金融返利导购平台'致力于为投资用户提供优质理财项目导购和额外返利， 让用户通过摇钱木又寸的专业导购投资心仪理财产品的同时，还能享受'生菜年化收益'的返利乐趣。">
+    <meta name="keywords" content="P2P理财,P2P网贷,投资理财,网络理财,网络投资,小额投资理财,如何投资理财,个人理财,家庭理财,易通贷,财路通">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>独乐乐不如众乐乐 - 摇钱木又寸</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/css/justified-nav.css" rel="stylesheet">
+    <script src="./static/js/jquery-1.12.3.min.js"></script>
+    <script src="./static/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./static/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="./static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./static/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <div class="header clearfix">
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              {{if eq .session ""}}
+              <li><a href="./register">注册</a></li>
+              <li><a href="./login">登录</a></li>
+              {{else}}
+              <li><a href="./user">{{.session}}&nbsp;&nbsp;欢迎您回来</a></li>
+              <li><a href="./user">用户中心</a></li>
+              <li><a href="./logout">注销</a></li>
+              {{end}}
+              <li><a href="#">帮助</a></li>
+            </ul>
+          </nav>
+          <ul class="nav navbar-nav navbar-left">
+            <li><img src="./static/img/logo.png" height="60"/></li>
+            <li><h3 class="text-muted" style="padding-left:15px;">摇钱木又寸</h3></li>
+          </ul>
+        </div>
+
+        <nav>
+          <ul class="nav nav-justified">
+            <li {{if eq .Path "/index"}}class="active"{{end}}><a href="./index">首页</a></li>
+            <li {{if eq .Path "/project"}}class="active"{{end}}><a href="./project">项目</a></li>
+            <li {{if eq .Path "/service"}}class="active"{{end}}><a href="./service">服务与支持</a></li>
+            <li><a href="#">渠道与合作</a></li>
+            <li {{if eq .Path "/aboutus"}}class="active"{{end}}><a href="./aboutus">关于摇钱木又寸</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </nav>
+      </div>

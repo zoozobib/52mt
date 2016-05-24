@@ -1,0 +1,25 @@
+<h1 class="page-header">用户中心</h1>
+
+<h4 class="sub-header">增加投资记录<div style="float:right;"><a href="/user/invest">返回投资列表</a></div></h4>
+
+<div class="table-responsive">
+  <form enctype="multipart/form-data" action="/user/invest/add" method="post" class="form-signin" >
+    <label class="sr-only">站点注册名</label>
+    <input name="site_username" id="inputEmail" class="form-control" placeholder="站点注册名" required autofocus>
+    <label class="sr-only">站点注册姓名(实名)</label>
+    <input name="site_name" id="inputEmail" class="form-control" placeholder="站点注册姓名(实名)" required autofocus>
+    <label class="sr-only">站点注册手机</label>
+    <input name="site_mp" id="inputEmail" class="form-control" placeholder="站点注册手机" required autofocus>
+    <label class="sr-only">投资时间</label>
+    <input name="invest_time" id="inputEmail" class="form-control" placeholder="投资时间" required autofocus>
+    <label class="sr-only">产品名称</label>
+    <input name="product_name" id="inputEmail" class="form-control" placeholder="产品名称" autofocus>
+    <label class="sr-only">投资额</label>
+    <input name="invest_amount" id="inputEmail" class="form-control" placeholder="投资额" required autofocus>
+    <label class="sr-only">投资截图</label>
+    <!--input name="invest_screen_shot" id="inputEmail" class="form-control" placeholder="投资截图" required autofocus-->
+    <input type="file" class="form-control" name="invest_screen_shot" />
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">上传并保存</button>
+  </form>
+</div>

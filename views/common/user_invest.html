@@ -1,0 +1,50 @@
+<h1 class="page-header">用户中心</h1>
+
+<div>
+  <h4 class="sub-header">投资列表<div style="float:right;"><a href="/user/invest/add">+增加记录</a></div></h4>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>站点注册名称</th>
+        <th>站点注册姓名(实名)</th>
+        <th>站点注册手机</th>
+        <th>投资时间</th>
+        <th>产品名称</th>
+        <th>投资额</th>
+        <th>截图</th>
+        <th>认定状态</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range $index,$elem := .tips}}
+      <tr>
+        <td>{{$elem.Gid}}</td>
+        <td>{{$elem.Site_username}}</td>
+        <td>{{$elem.Site_name}}</td>
+        <td>{{$elem.Site_mp}}</td>
+        <td>{{$elem.Invest_time}}</td>
+        <td>{{$elem.Product_name}}</td>
+        <td>{{$elem.Invest_amount}}</td>
+        <td><a href="{{$elem.Screenshot_url}}" target="_blank">{{$elem.Screenshot_url}}</a></td>
+        <td>
+          {{if eq $elem.Status "1"}}
+            已认定
+          {{else if eq $elem.Status "2"}}
+            已发放
+          {{else}}
+            认定中
+          {{end}}
+        </td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</div>
+
+<div class="alert alert-info" role="alert">
+        <strong>请注意</strong> 我们的认定周期为: 2-36个小时。
+</div>

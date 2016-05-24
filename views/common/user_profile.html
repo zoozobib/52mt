@@ -1,0 +1,21 @@
+<h1 class="page-header">用户中心</h1>
+
+<h4 class="sub-header">个人资料修改</h4>
+
+<div class="table-responsive">
+  <form class="form-signin" action="/user/profile" method="post">
+    <label for="inputEmail" class="sr-only">账号</label>
+    <input name="username" id="inputEmail" disabled class="form-control" placeholder="账号" required autofocus>
+    <label for="inputPassword" class="sr-only">密码(留空不修改)</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码(留空不修改)"  autofocus>
+    <label for="inputPassword" class="sr-only">确认密码(留空不修改)</label>
+    <input type="password" name="re_password" id="re_inputPassword" class="form-control" placeholder="确认密码(留空不修改)" >
+
+    <label class="sr-only">联系电话</label>
+    <input name="mp" id="mp" class="form-control" value="{{.mp}}" placeholder="联系电话" required>
+    <label class="sr-only">联系Email</label>
+    <input name="email" id="email" class="form-control" value="{{.email}}" placeholder="联系Email" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+  </form>
+</div>

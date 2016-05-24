@@ -1,0 +1,99 @@
+<h1 class="page-header">用户中心</h1>
+
+<div class="row placeholders">
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="今天收益">
+    <h4>
+      {{if .today_money}}
+        {{range $key,$val := .today_money}}
+          {{if $val.income}}
+            {{$val.income}}
+          {{else}}
+            0
+          {{end}}
+        {{end}}
+      {{else}}
+        0
+      {{end}}
+    </h4>
+    <span class="text-muted">今天收益金额和积分</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="最近一次收益">
+    <h4>
+      {{if .current_money}}
+        {{range $key,$val := .current_money}}
+          {{if $val.income}}
+            {{$val.income}}
+          {{else}}
+            0
+          {{end}}
+        {{end}}
+      {{else}}
+        0
+      {{end}}
+    </h4>
+    <span class="text-muted">最近一次收益金额和积分</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="最近7日收益">
+    <h4>
+      {{if .week_money}}
+        {{range $key,$val := .week_money}}
+          {{if $val.income}}
+            {{$val.income}}
+          {{else}}
+            0
+          {{end}}
+        {{end}}
+      {{else}}
+        0
+      {{end}}
+    </h4>
+    <span class="text-muted">近七天收益金额和积分</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="最近一个月收益">
+    <h4>
+      {{ if .month_money}}
+        {{range $key,$val := .month_money}}
+          {{if $val.income}}
+            {{$val.income}}
+          {{else}}
+            0
+          {{end}}
+        {{end}}
+      {{else}}
+        0
+      {{end}}
+    </h4>
+    <span class="text-muted">近30天收益金额和积分</span>
+  </div>
+</div>
+
+<h2 class="sub-header">收益报表</h2>
+<div class="table-responsive">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>产品名称</th>
+        <th>投资额</th>
+        <th>积分返点</th>
+        <th>时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range $key,$value := .user_money_list}}
+      <tr>
+        <td>{{$value.c_id}}</td>
+        <td>{{$value.first_invest_type}}</td>
+        <td>{{$value.first_buy_amount}}</td>
+        <td>{{$value.integral}}</td>
+        <td>{{$value.first_buy_time}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</div>
