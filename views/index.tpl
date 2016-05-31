@@ -45,7 +45,8 @@
 
         });
         {{else}}
-        window.location.href = "http://app.etongdai.com/register/landingPage7?friendId=MjMxOTI0OQ==";
+        //window.location.href = "http://app.etongdai.com/register/landingPage7?friendId=MjMxOTI0OQ==";
+        window.location.href = "https://m.etongdai.com/register/wapH5Register4?friendId=NDU1NDA2OA==";
         {{end}}
       });
 
@@ -73,7 +74,8 @@
 
         });
         {{else}}
-        window.location.href = "https://www.zlot.cn/register/xlwcfspread?hmsr=zhonghulian&hmpl=&hmcu=&hmkw=&hmci=";
+        //window.location.href = "https://www.zlot.cn/register/xlwcfspread?hmsr=zhonghulian&hmpl=&hmcu=&hmkw=&hmci=";
+        window.location.href = "http://u.50du.com/web/zlot-LHS.html";
         {{end}}
       });
       </script>
@@ -85,19 +87,19 @@
           <h2>敬请期待</h2>
           <p class="text-danger">随时有更新，惊喜等着你</p>
           <p>期待....</p>
-          <p><a class="btn btn-primary" target="_blank" href="https://www.zlot.cn/register/xlwcfspread?hmsr=zhonghulian&hmpl=&hmcu=&hmkw=&hmci=" role="button">开始赚钱 &raquo;</a></p>
+          <p><a class="btn btn-primary" target="_blank" href="javascript:void(0);" role="button">开始赚钱 &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <h2>敬请期待</h2>
           <p class="text-danger">随时有更新，惊喜等着你</p>
           <p>期待....</p>
-          <p><a class="btn btn-primary" target="_blank" href="https://www.zlot.cn/register/xlwcfspread?hmsr=zhonghulian&hmpl=&hmcu=&hmkw=&hmci=" role="button">开始赚钱 &raquo;</a></p>
+          <p><a class="btn btn-primary" target="_blank" href="javascript:void(0);" role="button">开始赚钱 &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <h2>敬请期待</h2>
           <p class="text-danger">随时有更新，惊喜等着你</p>
           <p>期待....</p>
-          <p><a class="btn btn-primary" target="_blank" href="https://www.zlot.cn/register/xlwcfspread?hmsr=zhonghulian&hmpl=&hmcu=&hmkw=&hmci=" role="button">开始赚钱 &raquo;</a></p>
+          <p><a class="btn btn-primary" target="_blank" href="javascript:void(0);" role="button">开始赚钱 &raquo;</a></p>
         </div>
       </div>
       <!--
